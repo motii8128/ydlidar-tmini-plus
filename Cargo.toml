@@ -1,0 +1,11 @@
+[package]
+name = "ydlidar-tmini-plus"
+version = "0.1.0"
+edition = "2021"
+description = "Driver for the YDLIDAR T-mini Plus: UART protocol parser and 2D point cloud acquisition"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# libudev (ポート列挙) を使わないので default-features を切っている。
+# ポート列挙 (available_ports) が必要なら features = ["libudev"] を足す。
+serialport = { version = "4", default-features = false }
